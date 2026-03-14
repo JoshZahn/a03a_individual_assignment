@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 3 Practice Test - Microsoft 101</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .quiz-question{background-color:#F5F9FF;border:1px solid var(--border-grey);border-radius:8px;padding:20px;margin:16px 0;}
+    .quiz-question h3{color:var(--accent-dark-blue);margin-top:0;}
+    .quiz-options{list-style:none;margin:12px 0;}
+    .quiz-options li{margin-bottom:10px;}
+    .quiz-options label{display:flex;align-items:center;gap:10px;padding:10px 14px;border:2px solid var(--border-grey);border-radius:6px;cursor:pointer;font-size:13pt;transition:border-color 0.2s,background-color 0.2s;}
+    .quiz-options label:hover,.quiz-options label:focus-within{border-color:var(--accent-dark-blue);background-color:var(--nav-hover);}
+    .quiz-options input[type="radio"]{width:18px;height:18px;accent-color:var(--accent-dark-blue);}
+    .quiz-options input[type="radio"]:focus{outline:2px solid var(--accent-dark-blue);outline-offset:2px;}
+    .feedback-area{margin-top:12px;padding:12px;border-radius:6px;font-size:13pt;display:none;}
+    .feedback-correct{background-color:#E8F5E9;border:1px solid var(--success-green);color:var(--success-green);}
+    .feedback-incorrect{background-color:#FFEBEE;border:1px solid var(--error-red);color:var(--error-red);}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="sidebar" aria-label="Course Navigation">
+    <div class="course-title">Microsoft 101</div>
+    <ul>
+      <li><a href="frame_2300.html">Home</a></li>
+      <li><a href="frame_2300.html" class="active" aria-current="page">Modules</a></li>
+      <li><a href="#">Assignments</a></li>
+      <li><a href="frame_4000.html">Discussions</a></li>
+      <li><a href="#">Zoom</a></li>
+      <li><a href="#">Grades</a></li>
+      <li><a href="#">Files</a></li>
+    </ul>
+  </nav>
+  <main id="main-content">
+    <div class="breadcrumb" aria-label="Breadcrumb">
+      <a href="frame_2300.html">Home</a> &gt;
+      <a href="frame_2300.html">Unit 3: Create a PowerPoint</a> &gt;
+      <strong>Check Your Understanding</strong>
+    </div>
+    <h1>Unit 3: Check Your Understanding</h1>
+    <p>Answer the following questions to test your knowledge of the Unit 3 lessons.</p>
+    <div class="quiz-question"><h3>Question 1</h3><p>Where do you find the option to insert a new chart in PowerPoint?</p>
+      <fieldset style="border:none;padding:0;"><legend style="position:absolute;left:-9999px;">Select your answer for Question 1</legend>
+        <ul class="quiz-options">
+          <li><label><input type="radio" name="q1" value="a"> A. The Home tab</label></li>
+          <li><label><input type="radio" name="q1" value="b"> B. The Insert tab</label></li>
+          <li><label><input type="radio" name="q1" value="c"> C. The Design tab</label></li>
+          <li><label><input type="radio" name="q1" value="d"> D. The View tab</label></li>
+        </ul>
+      </fieldset><div id="feedback-q1" class="feedback-area" role="alert" aria-live="polite"></div></div>
+    <div class="quiz-question"><h3>Question 2</h3><p>When selecting images for a presentation, which of the following should you avoid?</p>
+      <fieldset style="border:none;padding:0;"><legend style="position:absolute;left:-9999px;">Select your answer for Question 2</legend>
+        <ul class="quiz-options">
+          <li><label><input type="radio" name="q2" value="a"> A. High-resolution photographs</label></li>
+          <li><label><input type="radio" name="q2" value="b"> B. Images relevant to your topic</label></li>
+          <li><label><input type="radio" name="q2" value="c"> C. Animated GIFs and moving images</label></li>
+          <li><label><input type="radio" name="q2" value="d"> D. Images appropriate for your audience</label></li>
+        </ul>
+      </fieldset><div id="feedback-q2" class="feedback-area" role="alert" aria-live="polite"></div></div>
+    <div class="quiz-question"><h3>Question 3</h3><p>What is the primary purpose of applying a design theme in PowerPoint?</p>
+      <fieldset style="border:none;padding:0;"><legend style="position:absolute;left:-9999px;">Select your answer for Question 3</legend>
+        <ul class="quiz-options">
+          <li><label><input type="radio" name="q3" value="a"> A. To add animations to every slide</label></li>
+          <li><label><input type="radio" name="q3" value="b"> B. To create a cohesive, professional look with coordinated colors, fonts, and backgrounds</label></li>
+          <li><label><input type="radio" name="q3" value="c"> C. To automatically insert charts and graphs</label></li>
+          <li><label><input type="radio" name="q3" value="d"> D. To convert the presentation to a PDF</label></li>
+        </ul>
+      </fieldset><div id="feedback-q3" class="feedback-area" role="alert" aria-live="polite"></div></div>
+    <button class="btn-primary" onclick="checkAnswers()" style="border:none;cursor:pointer;">Submit Answers</button>
+    <div id="results" style="margin-top:20px;display:none;"><div class="knowledge-check"><h3 id="results-heading">Results</h3><p id="results-text"></p></div></div>
+    <div class="placeholder-notice" style="margin-top:24px;">
+      <strong>&#9888; Development Note:</strong>
+      This is a sample practice test demonstrating how assessments will be incorporated into Unit 3. The final version will include additional questions aligned with each lesson's learning objectives. Per A02 specifications: all form fields include associated labels, feedback is text-based and does not rely on color alone, error messages are descriptive, and all interactive elements are keyboard accessible. Per UDL 5.1 and 5.2, the final practice test will also accept audio recordings and file uploads as alternative response formats.
+      <br><br><strong>WCAG 4.1.1:</strong> Final page code must be validated using the W3C Markup Validation Service before launch to confirm proper element nesting and unique IDs.
+    </div>
+    <div class="lesson-nav">
+      <a href="frame_2340.html">&larr; Back to Lesson 3.4: Apply Design Themes</a>
+      <a href="frame_4000.html">Discussion Forum &rarr;</a>
+    </div>
+    <footer><p>Microsoft 101 &mdash; Unit 3 Prototype &mdash; Go-Getters Team &mdash; EME6226 Spring 2026</p></footer>
+  </main>
+  <script>
+    function checkAnswers(){var answers={q1:'b',q2:'c',q3:'b'},correct=0,total=3;for(var q in answers){var sel=document.querySelector('input[name="'+q+'"]:checked'),fb=document.getElementById('feedback-'+q);if(sel&&sel.value===answers[q]){correct++;fb.className='feedback-area feedback-correct';fb.innerHTML='<strong>&#10003; Correct!</strong> Well done.';fb.style.display='block';}else if(sel){fb.className='feedback-area feedback-incorrect';fb.innerHTML='<strong>&#10007; Incorrect.</strong> Review the lesson material and try again.';fb.style.display='block';}else{fb.className='feedback-area feedback-incorrect';fb.innerHTML='<strong>&#9888; No answer selected.</strong> Please select an option.';fb.style.display='block';}}var rd=document.getElementById('results'),rt=document.getElementById('results-text');rd.style.display='block';rt.textContent=correct===total?'You answered '+correct+' out of '+total+' correctly. Great work! You may proceed to the next section.':'You answered '+correct+' out of '+total+' correctly. Review the lessons and try again.';rd.scrollIntoView({behavior:'smooth'});}
+  </script>
+</body>
+</html>
