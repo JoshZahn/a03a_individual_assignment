@@ -677,3 +677,72 @@ footer {
   outline: 2px solid #7B1FA2;
   outline-offset: 2px;
 }
+
+/* Sticky Floating Lesson Navigation - visible while scrolling */
+.sticky-nav {
+  position: fixed;
+  bottom: 0;
+  left: 200px; /* sidebar width */
+  right: 0;
+  background-color: var(--bg-white);
+  border-top: 2px solid var(--accent-dark-blue);
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 800;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+}
+.sticky-nav a {
+  color: var(--bg-white);
+  background-color: var(--accent-dark-blue);
+  text-decoration: none;
+  font-size: 13pt;
+  font-family: Arial, sans-serif;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+  font-weight: bold;
+}
+.sticky-nav a:hover,
+.sticky-nav a:focus {
+  background-color: #004C99;
+  outline: 3px solid var(--accent-dark-blue);
+  outline-offset: 2px;
+}
+.sticky-nav .sticky-placeholder {
+  width: 180px; /* keeps layout balanced when only one link exists */
+}
+@media (max-width: 768px) {
+  .sticky-nav {
+    left: 0;
+    padding: 10px 16px;
+  }
+}
+
+/* Next Step callout above bottom nav */
+.next-step-callout {
+  text-align: center;
+  margin-top: 32px;
+  padding: 16px;
+  background-color: #F5F9FF;
+  border: 1px solid var(--accent-dark-blue);
+  border-radius: 8px;
+  font-size: 14pt;
+  color: var(--accent-dark-blue);
+}
+.next-step-callout a {
+  color: var(--accent-dark-blue);
+  font-weight: bold;
+  text-decoration: underline;
+}
+.next-step-callout a:hover,
+.next-step-callout a:focus {
+  outline: 2px solid var(--accent-dark-blue);
+  outline-offset: 2px;
+}
+
+/* Add bottom padding to main so sticky nav doesn't cover content */
+main {
+  padding-bottom: 80px;
+}
