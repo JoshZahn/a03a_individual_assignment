@@ -3,20 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unit 3 Practice Test - Microsoft 101</title>
+  <title>Unit 3 Final Assignment - Microsoft 101</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    .quiz-question{background-color:#F5F9FF;border:1px solid var(--border-grey);border-radius:8px;padding:20px;margin:16px 0;}
-    .quiz-question h3{color:var(--accent-dark-blue);margin-top:0;}
-    .quiz-options{list-style:none;margin:12px 0;}
-    .quiz-options li{margin-bottom:10px;}
-    .quiz-options label{display:flex;align-items:center;gap:10px;padding:10px 14px;border:2px solid var(--border-grey);border-radius:6px;cursor:pointer;font-size:13pt;transition:border-color 0.2s,background-color 0.2s;}
-    .quiz-options label:hover,.quiz-options label:focus-within{border-color:var(--accent-dark-blue);background-color:var(--nav-hover);}
-    .quiz-options input[type="radio"]{width:18px;height:18px;accent-color:var(--accent-dark-blue);}
-    .quiz-options input[type="radio"]:focus{outline:2px solid var(--accent-dark-blue);outline-offset:2px;}
-    .feedback-area{margin-top:12px;padding:12px;border-radius:6px;font-size:13pt;display:none;}
-    .feedback-correct{background-color:#E8F5E9;border:1px solid var(--success-green);color:var(--success-green);}
-    .feedback-incorrect{background-color:#FFEBEE;border:1px solid var(--error-red);color:var(--error-red);}
+    .assignment-box{background-color:#F5F9FF;border:1px solid var(--border-grey);border-radius:8px;padding:20px;margin:16px 0;}
+    .assignment-box h3{color:var(--accent-dark-blue);margin-top:0;}
+    .rubric-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:12pt;}
+    .rubric-table th{background-color:var(--accent-dark-blue);color:var(--bg-white);padding:12px;text-align:left;font-size:13pt;}
+    .rubric-table td{padding:10px 12px;border:1px solid var(--border-grey);vertical-align:top;}
+    .rubric-table tr:nth-child(even){background-color:#F5F9FF;}
+    .rubric-table tr:hover{background-color:var(--nav-hover);}
+    .points-col{text-align:center;font-weight:bold;width:60px;}
   </style>
 </head>
 <body>
@@ -37,44 +34,109 @@
     <div class="breadcrumb" aria-label="Breadcrumb">
       <a href="frame_2300.html">Home</a> &gt;
       <a href="frame_2300.html">Unit 3: Create a PowerPoint</a> &gt;
-      <strong>Check Your Understanding</strong>
+      <strong>Unit 3 Final Assignment</strong>
     </div>
-    <h1>Unit 3: Check Your Understanding</h1>
-    <p>Answer the following questions to test your knowledge of the Unit 3 lessons.</p>
-    <div class="quiz-question"><h3>Question 1</h3><p>Where do you find the option to insert a new chart in PowerPoint?</p>
-      <fieldset style="border:none;padding:0;"><legend style="position:absolute;left:-9999px;">Select your answer for Question 1</legend>
-        <ul class="quiz-options">
-          <li><label><input type="radio" name="q1" value="a"> A. The Home tab</label></li>
-          <li><label><input type="radio" name="q1" value="b"> B. The Insert tab</label></li>
-          <li><label><input type="radio" name="q1" value="c"> C. The Design tab</label></li>
-          <li><label><input type="radio" name="q1" value="d"> D. The View tab</label></li>
-        </ul>
-      </fieldset><div id="feedback-q1" class="feedback-area" role="alert" aria-live="polite"></div></div>
-    <div class="quiz-question"><h3>Question 2</h3><p>When selecting images for a presentation, which of the following should you avoid?</p>
-      <fieldset style="border:none;padding:0;"><legend style="position:absolute;left:-9999px;">Select your answer for Question 2</legend>
-        <ul class="quiz-options">
-          <li><label><input type="radio" name="q2" value="a"> A. High-resolution photographs</label></li>
-          <li><label><input type="radio" name="q2" value="b"> B. Images relevant to your topic</label></li>
-          <li><label><input type="radio" name="q2" value="c"> C. Animated GIFs and moving images</label></li>
-          <li><label><input type="radio" name="q2" value="d"> D. Images appropriate for your audience</label></li>
-        </ul>
-      </fieldset><div id="feedback-q2" class="feedback-area" role="alert" aria-live="polite"></div></div>
-    <div class="quiz-question"><h3>Question 3</h3><p>What is the primary purpose of applying a design theme in PowerPoint?</p>
-      <fieldset style="border:none;padding:0;"><legend style="position:absolute;left:-9999px;">Select your answer for Question 3</legend>
-        <ul class="quiz-options">
-          <li><label><input type="radio" name="q3" value="a"> A. To add animations to every slide</label></li>
-          <li><label><input type="radio" name="q3" value="b"> B. To create a cohesive, professional look with coordinated colors, fonts, and backgrounds</label></li>
-          <li><label><input type="radio" name="q3" value="c"> C. To automatically insert charts and graphs</label></li>
-          <li><label><input type="radio" name="q3" value="d"> D. To convert the presentation to a PDF</label></li>
-        </ul>
-      </fieldset><div id="feedback-q3" class="feedback-area" role="alert" aria-live="polite"></div></div>
-    <button class="btn-primary" onclick="checkAnswers()" style="border:none;cursor:pointer;">Submit Answers</button>
-    <div id="results" style="margin-top:20px;display:none;"><div class="knowledge-check"><h3 id="results-heading">Results</h3><p id="results-text"></p></div></div>
-    <div class="placeholder-notice" style="margin-top:24px;">
-      <strong>&#9888; Development Note:</strong>
-      This is a sample practice test demonstrating how assessments will be incorporated into Unit 3. The final version will include additional questions aligned with each lesson's learning objectives. Per A02 specifications: all form fields include associated labels, feedback is text-based and does not rely on color alone, error messages are descriptive, and all interactive elements are keyboard accessible. Per UDL 5.1 and 5.2, the final practice test will also accept audio recordings and file uploads as alternative response formats.
-      <br><br><strong>WCAG 4.1.1:</strong> Final page code must be validated using the W3C Markup Validation Service before launch to confirm proper element nesting and unique IDs.
+    <h1>Unit 3 Final Assignment: Create a PowerPoint Presentation</h1>
+
+    <div class="assignment-box">
+      <h3>Activity Requirements</h3>
+      <p>This assignment is designed to help you practice using all of the PowerPoint tools covered in Unit 3. Choose a topic — serious or fun — and create a PowerPoint presentation that meets the following requirements:</p>
+      <ul style="margin-left:20px;margin-bottom:16px;">
+        <li>Your presentation must include <strong>10 slides</strong></li>
+        <li>Include at least <strong>3 photos with labels</strong></li>
+        <li>Include at least <strong>1 chart</strong></li>
+        <li>Apply <strong>1 design theme</strong> consistently across all slides</li>
+        <li>Use at least <strong>2 text colors</strong> effectively</li>
+        <li>Your presentation must have a <strong>cohesive look</strong></li>
+        <li>Include a brief narrative in the <strong>"Click to add notes"</strong> section of each slide describing your experience creating that individual slide</li>
+        <li>Before submitting, <strong>review all slides for clarity, consistency, and errors</strong></li>
+      </ul>
     </div>
+
+    <h2>Grading Rubric (100 Points)</h2>
+    <p>Your presentation will be evaluated using the following rubric. Use it as a self-evaluation checklist before submitting.</p>
+
+    <table class="rubric-table" aria-label="Unit 3 Final Assignment Rubric">
+      <thead>
+        <tr>
+          <th scope="col">Criteria</th>
+          <th scope="col">Excellent</th>
+          <th scope="col">Proficient</th>
+          <th scope="col">Needs Improvement</th>
+          <th scope="col" class="points-col">Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Topic &amp; Overall Presentation Purpose</strong></td>
+          <td>Topic is clear, appropriate, and presentation stays focused throughout all slides.</td>
+          <td>Topic is clear but some slides may lack focus.</td>
+          <td>Topic is unclear or presentation lacks direction.</td>
+          <td class="points-col">/10</td>
+        </tr>
+        <tr>
+          <td><strong>Slide Requirement (10 Slides)</strong></td>
+          <td>Presentation includes 10 well-developed slides.</td>
+          <td>Presentation has 8–9 slides or slides lack detail.</td>
+          <td>Presentation has fewer than 8 slides or incomplete content.</td>
+          <td class="points-col">/10</td>
+        </tr>
+        <tr>
+          <td><strong>Images (3 Photos with Labels)</strong></td>
+          <td>Includes 3 relevant photos, each with clear labels that support the topic.</td>
+          <td>Photos included but labels or relevance could improve.</td>
+          <td>Photos missing, unclear, or labels missing.</td>
+          <td class="points-col">/10</td>
+        </tr>
+        <tr>
+          <td><strong>Chart Inclusion</strong></td>
+          <td>Chart is included and clearly displays relevant data.</td>
+          <td>Chart included but data or formatting could be improved.</td>
+          <td>Chart missing or unclear.</td>
+          <td class="points-col">/10</td>
+        </tr>
+        <tr>
+          <td><strong>Design Theme</strong></td>
+          <td>A design theme is applied consistently across all slides.</td>
+          <td>Theme is applied but inconsistently used.</td>
+          <td>Theme missing or slides visually inconsistent.</td>
+          <td class="points-col">/10</td>
+        </tr>
+        <tr>
+          <td><strong>Text Colors (2 Colors Used Effectively)</strong></td>
+          <td>Two text colors are used effectively and consistently for readability and design.</td>
+          <td>Two colors used but inconsistently or with limited effectiveness.</td>
+          <td>Colors poorly chosen or not used as required.</td>
+          <td class="points-col">/10</td>
+        </tr>
+        <tr>
+          <td><strong>Visual Cohesion &amp; Organization</strong></td>
+          <td>Slides are visually cohesive, balanced, and easy to read.</td>
+          <td>Slides are mostly organized but cohesion could improve.</td>
+          <td>Slides appear cluttered or inconsistent.</td>
+          <td class="points-col">/10</td>
+        </tr>
+        <tr>
+          <td><strong>Content Clarity &amp; Review</strong></td>
+          <td>All slides have been reviewed for clarity, consistency, and errors. Content is polished and free of mistakes.</td>
+          <td>Most content is clear but minor errors or inconsistencies remain.</td>
+          <td>Content contains noticeable errors, unclear language, or has not been reviewed.</td>
+          <td class="points-col">/10</td>
+        </tr>
+        <tr>
+          <td><strong>Speaker Notes / Narrative</strong></td>
+          <td>Each slide includes clear notes explaining the experience of creating the slide and using PowerPoint tools.</td>
+          <td>Notes included but explanations are brief or incomplete.</td>
+          <td>Notes missing or do not explain the process.</td>
+          <td class="points-col">/20</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="tip-box">
+      <strong>&#128161; Tip:</strong> Use the rubric above as a self-evaluation checklist before you submit. Make sure every requirement is met and every slide has speaker notes.
+    </div>
+
     <div class="next-step-callout">
       Next step: <a href="frame_4000.html">Discussion Forum</a>
     </div>
@@ -84,9 +146,6 @@
     </div>
     <footer><p>Microsoft 101 &mdash; Unit 3 Prototype &mdash; Go-Getters Team &mdash; EME6226 Spring 2026</p></footer>
   </main>
-  <script>
-    function checkAnswers(){var answers={q1:'b',q2:'c',q3:'b'},correct=0,total=3;for(var q in answers){var sel=document.querySelector('input[name="'+q+'"]:checked'),fb=document.getElementById('feedback-'+q);if(sel&&sel.value===answers[q]){correct++;fb.className='feedback-area feedback-correct';fb.innerHTML='<strong>&#10003; Correct!</strong> Well done.';fb.style.display='block';}else if(sel){fb.className='feedback-area feedback-incorrect';fb.innerHTML='<strong>&#10007; Incorrect.</strong> Review the lesson material and try again.';fb.style.display='block';}else{fb.className='feedback-area feedback-incorrect';fb.innerHTML='<strong>&#9888; No answer selected.</strong> Please select an option.';fb.style.display='block';}}var rd=document.getElementById('results'),rt=document.getElementById('results-text');rd.style.display='block';rt.textContent=correct===total?'You answered '+correct+' out of '+total+' correctly. Great work! You may proceed to the next section.':'You answered '+correct+' out of '+total+' correctly. Review the lessons and try again.';rd.scrollIntoView({behavior:'smooth'});}
-  </script>
   <nav class="sticky-nav" aria-label="Lesson navigation">
     <a href="frame_2340.html">&larr; Apply Design Themes</a>
     <a href="frame_4000.html">Next: Discussion Forum &rarr;</a>
